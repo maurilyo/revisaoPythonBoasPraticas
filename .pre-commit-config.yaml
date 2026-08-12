@@ -1,3 +1,5 @@
+default_stages: [pre-commit]
+
 repos:
   # Seu Ruff já estava aqui
   - repo: https://github.com/astral-sh/ruff-pre-commit
