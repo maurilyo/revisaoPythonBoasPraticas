@@ -1,10 +1,23 @@
 repos:
+  # Seu Ruff já estava aqui
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    # Você pode atualizar a versão (rev) conforme o Ruff lança atualizações
     rev: v0.6.0
     hooks:
-      # Hook 1: Roda o Linter (substituto do flake8) e tenta corrigir erros básicos
       - id: ruff
         args: [ --fix ]
-      # Hook 2: Roda o Formatador (substituto do blue/black)
       - id: ruff-format
+
+  # 1. Adicionando o Bandit (Segurança)
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.9
+    hooks:
+      - id: bandit
+        args: ["-c", "pyproject.toml"] # Para ele ler configs se você tiver
+        additional_dependencies: ["bandit[toml]"]
+
+  # 2. Adicionando o Commitizen (Padronização de Mensagens)
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.29.0
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
