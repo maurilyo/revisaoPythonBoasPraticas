@@ -1,0 +1,10 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Você pode atualizar a versão (rev) conforme o Ruff lança atualizações
+    rev: v0.6.0
+    hooks:
+      # Hook 1: Roda o Linter (substituto do flake8) e tenta corrigir erros básicos
+      - id: ruff
+        args: [ --fix ]
+      # Hook 2: Roda o Formatador (substituto do blue/black)
+      - id: ruff-format
