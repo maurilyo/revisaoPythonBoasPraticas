@@ -12,6 +12,8 @@ dependencies = [
 [tool.ruff]
 # Adiciona a pasta .astro na lista de ignorados do Ruff
 extend-exclude = [".astro"]
+# Adicione esta linha para o Ruff parar de encher o saco com o tamanho da linha:
+ignore = ["E501"]
 
 [tool.ruff.lint]
 # E = Erros, F = Pyflakes(Lógica), N = Naming (Nomenclatura PEP-8)
