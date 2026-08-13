@@ -9,6 +9,10 @@ dependencies = [
     "ruff>=0.16.2",
 ]
 
+[tool.ruff]
+# Adiciona a pasta .astro na lista de ignorados do Ruff
+extend-exclude = [".astro"]
+
 [tool.ruff.lint]
 # E = Erros, F = Pyflakes(Lógica), N = Naming (Nomenclatura PEP-8)
 select = ["E", "F", "N"]
